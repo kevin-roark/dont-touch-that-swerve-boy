@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB201A44187FF11F00059C5D /* round_swerve_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FB201A43187FF11F00059C5D /* round_swerve_plain.png */; };
+		FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */ = {isa = PBXBuildFile; fileRef = FB201A45187FF38A00059C5D /* round_swerve_shocked.png */; };
+		FB201A49187FF4D400059C5D /* SwerveBoySpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A48187FF4D400059C5D /* SwerveBoySpriteNode.m */; };
+		FB90CACC187FEA1700C658A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACB187FEA1700C658A1 /* Foundation.framework */; };
+		FB90CACE187FEA1700C658A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */; };
+		FB90CAD0187FEA1700C658A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACF187FEA1700C658A1 /* UIKit.framework */; };
+		FB90CAD2187FEA1700C658A1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CAD1187FEA1700C658A1 /* SpriteKit.framework */; };
+		FB90CAD8187FEA1700C658A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB90CAD6187FEA1700C658A1 /* InfoPlist.strings */; };
+		FB90CADA187FEA1700C658A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CAD9187FEA1700C658A1 /* main.m */; };
+		FB90CADE187FEA1700C658A1 /* SwerveBoyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CADD187FEA1700C658A1 /* SwerveBoyAppDelegate.m */; };
+		FB90CAE1187FEA1700C658A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB90CADF187FEA1700C658A1 /* Main.storyboard */; };
+		FB90CAE4187FEA1700C658A1 /* SwerveBoyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CAE3187FEA1700C658A1 /* SwerveBoyViewController.m */; };
+		FB90CAE7187FEA1700C658A1 /* SwerveBoyMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CAE6187FEA1700C658A1 /* SwerveBoyMyScene.m */; };
+		FB90CAE9187FEA1700C658A1 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90CAE8187FEA1700C658A1 /* Spaceship.png */; };
+		FB90CAEB187FEA1700C658A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB90CAEA187FEA1700C658A1 /* Images.xcassets */; };
+		FB90CAF2187FEA1700C658A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CAF1187FEA1700C658A1 /* XCTest.framework */; };
+		FB90CAF3187FEA1700C658A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACB187FEA1700C658A1 /* Foundation.framework */; };
+		FB90CAF4187FEA1700C658A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACF187FEA1700C658A1 /* UIKit.framework */; };
+		FB90CAFC187FEA1700C658A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB90CAFA187FEA1700C658A1 /* InfoPlist.strings */; };
+		FB90CAFE187FEA1700C658A1 /* Don_t_touch_that_swerve_boyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CAFD187FEA1700C658A1 /* Don_t_touch_that_swerve_boyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB90CAF5187FEA1700C658A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB90CAC0187FEA1700C658A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB90CAC7187FEA1700C658A1;
+			remoteInfo = "Don't touch that swerve boy";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB201A43187FF11F00059C5D /* round_swerve_plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_swerve_plain.png; sourceTree = "<group>"; };
+		FB201A45187FF38A00059C5D /* round_swerve_shocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_swerve_shocked.png; sourceTree = "<group>"; };
+		FB201A47187FF4D400059C5D /* SwerveBoySpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwerveBoySpriteNode.h; sourceTree = "<group>"; };
+		FB201A48187FF4D400059C5D /* SwerveBoySpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwerveBoySpriteNode.m; sourceTree = "<group>"; };
+		FB90CAC8187FEA1700C658A1 /* Don't touch that swerve boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don't touch that swerve boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB90CACB187FEA1700C658A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB90CACF187FEA1700C658A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB90CAD1187FEA1700C658A1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		FB90CAD5187FEA1700C658A1 /* Don't touch that swerve boy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Don't touch that swerve boy-Info.plist"; sourceTree = "<group>"; };
+		FB90CAD7187FEA1700C658A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB90CAD9187FEA1700C658A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB90CADB187FEA1700C658A1 /* Don't touch that swerve boy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Don't touch that swerve boy-Prefix.pch"; sourceTree = "<group>"; };
+		FB90CADC187FEA1700C658A1 /* SwerveBoyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwerveBoyAppDelegate.h; sourceTree = "<group>"; };
+		FB90CADD187FEA1700C658A1 /* SwerveBoyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwerveBoyAppDelegate.m; sourceTree = "<group>"; };
+		FB90CAE0187FEA1700C658A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB90CAE2187FEA1700C658A1 /* SwerveBoyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwerveBoyViewController.h; sourceTree = "<group>"; };
+		FB90CAE3187FEA1700C658A1 /* SwerveBoyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwerveBoyViewController.m; sourceTree = "<group>"; };
+		FB90CAE5187FEA1700C658A1 /* SwerveBoyMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwerveBoyMyScene.h; sourceTree = "<group>"; };
+		FB90CAE6187FEA1700C658A1 /* SwerveBoyMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwerveBoyMyScene.m; sourceTree = "<group>"; };
+		FB90CAE8187FEA1700C658A1 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		FB90CAEA187FEA1700C658A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB90CAF0187FEA1700C658A1 /* Don't touch that swerve boyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Don't touch that swerve boyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB90CAF1187FEA1700C658A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB90CAF9187FEA1700C658A1 /* Don't touch that swerve boyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Don't touch that swerve boyTests-Info.plist"; sourceTree = "<group>"; };
+		FB90CAFB187FEA1700C658A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB90CAFD187FEA1700C658A1 /* Don_t_touch_that_swerve_boyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Don_t_touch_that_swerve_boyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB90CAC5187FEA1700C658A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB90CACE187FEA1700C658A1 /* CoreGraphics.framework in Frameworks */,
+				FB90CAD0187FEA1700C658A1 /* UIKit.framework in Frameworks */,
+				FB90CAD2187FEA1700C658A1 /* SpriteKit.framework in Frameworks */,
+				FB90CACC187FEA1700C658A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB90CAED187FEA1700C658A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB90CAF2187FEA1700C658A1 /* XCTest.framework in Frameworks */,
+				FB90CAF4187FEA1700C658A1 /* UIKit.framework in Frameworks */,
+				FB90CAF3187FEA1700C658A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB90CABF187FEA1700C658A1 = {
+			isa = PBXGroup;
+			children = (
+				FB90CAD3187FEA1700C658A1 /* Don't touch that swerve boy */,
+				FB90CAF7187FEA1700C658A1 /* Don't touch that swerve boyTests */,
+				FB90CACA187FEA1700C658A1 /* Frameworks */,
+				FB90CAC9187FEA1700C658A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB90CAC9187FEA1700C658A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CAC8187FEA1700C658A1 /* Don't touch that swerve boy.app */,
+				FB90CAF0187FEA1700C658A1 /* Don't touch that swerve boyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB90CACA187FEA1700C658A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CACB187FEA1700C658A1 /* Foundation.framework */,
+				FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */,
+				FB90CACF187FEA1700C658A1 /* UIKit.framework */,
+				FB90CAD1187FEA1700C658A1 /* SpriteKit.framework */,
+				FB90CAF1187FEA1700C658A1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB90CAD3187FEA1700C658A1 /* Don't touch that swerve boy */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CADC187FEA1700C658A1 /* SwerveBoyAppDelegate.h */,
+				FB90CADD187FEA1700C658A1 /* SwerveBoyAppDelegate.m */,
+				FB90CADF187FEA1700C658A1 /* Main.storyboard */,
+				FB90CAE2187FEA1700C658A1 /* SwerveBoyViewController.h */,
+				FB90CAE3187FEA1700C658A1 /* SwerveBoyViewController.m */,
+				FB90CAE5187FEA1700C658A1 /* SwerveBoyMyScene.h */,
+				FB90CAE6187FEA1700C658A1 /* SwerveBoyMyScene.m */,
+				FB90CAE8187FEA1700C658A1 /* Spaceship.png */,
+				FB201A43187FF11F00059C5D /* round_swerve_plain.png */,
+				FB201A45187FF38A00059C5D /* round_swerve_shocked.png */,
+				FB90CAEA187FEA1700C658A1 /* Images.xcassets */,
+				FB90CAD4187FEA1700C658A1 /* Supporting Files */,
+				FB201A47187FF4D400059C5D /* SwerveBoySpriteNode.h */,
+				FB201A48187FF4D400059C5D /* SwerveBoySpriteNode.m */,
+			);
+			path = "Don't touch that swerve boy";
+			sourceTree = "<group>";
+		};
+		FB90CAD4187FEA1700C658A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CAD5187FEA1700C658A1 /* Don't touch that swerve boy-Info.plist */,
+				FB90CAD6187FEA1700C658A1 /* InfoPlist.strings */,
+				FB90CAD9187FEA1700C658A1 /* main.m */,
+				FB90CADB187FEA1700C658A1 /* Don't touch that swerve boy-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB90CAF7187FEA1700C658A1 /* Don't touch that swerve boyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CAFD187FEA1700C658A1 /* Don_t_touch_that_swerve_boyTests.m */,
+				FB90CAF8187FEA1700C658A1 /* Supporting Files */,
+			);
+			path = "Don't touch that swerve boyTests";
+			sourceTree = "<group>";
+		};
+		FB90CAF8187FEA1700C658A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB90CAF9187FEA1700C658A1 /* Don't touch that swerve boyTests-Info.plist */,
+				FB90CAFA187FEA1700C658A1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB90CAC7187FEA1700C658A1 /* Don't touch that swerve boy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB90CB01187FEA1700C658A1 /* Build configuration list for PBXNativeTarget "Don't touch that swerve boy" */;
+			buildPhases = (
+				FB90CAC4187FEA1700C658A1 /* Sources */,
+				FB90CAC5187FEA1700C658A1 /* Frameworks */,
+				FB90CAC6187FEA1700C658A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Don't touch that swerve boy";
+			productName = "Don't touch that swerve boy";
+			productReference = FB90CAC8187FEA1700C658A1 /* Don't touch that swerve boy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB90CAEF187FEA1700C658A1 /* Don't touch that swerve boyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB90CB04187FEA1700C658A1 /* Build configuration list for PBXNativeTarget "Don't touch that swerve boyTests" */;
+			buildPhases = (
+				FB90CAEC187FEA1700C658A1 /* Sources */,
+				FB90CAED187FEA1700C658A1 /* Frameworks */,
+				FB90CAEE187FEA1700C658A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB90CAF6187FEA1700C658A1 /* PBXTargetDependency */,
+			);
+			name = "Don't touch that swerve boyTests";
+			productName = "Don't touch that swerve boyTests";
+			productReference = FB90CAF0187FEA1700C658A1 /* Don't touch that swerve boyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB90CAC0187FEA1700C658A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SwerveBoy;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kevin Roark";
+				TargetAttributes = {
+					FB90CAEF187FEA1700C658A1 = {
+						TestTargetID = FB90CAC7187FEA1700C658A1;
+					};
+				};
+			};
+			buildConfigurationList = FB90CAC3187FEA1700C658A1 /* Build configuration list for PBXProject "Don't touch that swerve boy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB90CABF187FEA1700C658A1;
+			productRefGroup = FB90CAC9187FEA1700C658A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB90CAC7187FEA1700C658A1 /* Don't touch that swerve boy */,
+				FB90CAEF187FEA1700C658A1 /* Don't touch that swerve boyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB90CAC6187FEA1700C658A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB90CAD8187FEA1700C658A1 /* InfoPlist.strings in Resources */,
+				FB90CAEB187FEA1700C658A1 /* Images.xcassets in Resources */,
+				FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */,
+				FB90CAE9187FEA1700C658A1 /* Spaceship.png in Resources */,
+				FB201A44187FF11F00059C5D /* round_swerve_plain.png in Resources */,
+				FB90CAE1187FEA1700C658A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB90CAEE187FEA1700C658A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB90CAFC187FEA1700C658A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB90CAC4187FEA1700C658A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB90CAE4187FEA1700C658A1 /* SwerveBoyViewController.m in Sources */,
+				FB90CADA187FEA1700C658A1 /* main.m in Sources */,
+				FB90CADE187FEA1700C658A1 /* SwerveBoyAppDelegate.m in Sources */,
+				FB90CAE7187FEA1700C658A1 /* SwerveBoyMyScene.m in Sources */,
+				FB201A49187FF4D400059C5D /* SwerveBoySpriteNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB90CAEC187FEA1700C658A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB90CAFE187FEA1700C658A1 /* Don_t_touch_that_swerve_boyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB90CAF6187FEA1700C658A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB90CAC7187FEA1700C658A1 /* Don't touch that swerve boy */;
+			targetProxy = FB90CAF5187FEA1700C658A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB90CAD6187FEA1700C658A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB90CAD7187FEA1700C658A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB90CADF187FEA1700C658A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB90CAE0187FEA1700C658A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB90CAFA187FEA1700C658A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB90CAFB187FEA1700C658A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB90CAFF187FEA1700C658A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB90CB00187FEA1700C658A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB90CB02187FEA1700C658A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Don't touch that swerve boy/Don't touch that swerve boy-Prefix.pch";
+				INFOPLIST_FILE = "Don't touch that swerve boy/Don't touch that swerve boy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB90CB03187FEA1700C658A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Don't touch that swerve boy/Don't touch that swerve boy-Prefix.pch";
+				INFOPLIST_FILE = "Don't touch that swerve boy/Don't touch that swerve boy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB90CB05187FEA1700C658A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Don't touch that swerve boy.app/Don't touch that swerve boy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Don't touch that swerve boy/Don't touch that swerve boy-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Don't touch that swerve boyTests/Don't touch that swerve boyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB90CB06187FEA1700C658A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Don't touch that swerve boy.app/Don't touch that swerve boy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Don't touch that swerve boy/Don't touch that swerve boy-Prefix.pch";
+				INFOPLIST_FILE = "Don't touch that swerve boyTests/Don't touch that swerve boyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB90CAC3187FEA1700C658A1 /* Build configuration list for PBXProject "Don't touch that swerve boy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB90CAFF187FEA1700C658A1 /* Debug */,
+				FB90CB00187FEA1700C658A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB90CB01187FEA1700C658A1 /* Build configuration list for PBXNativeTarget "Don't touch that swerve boy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB90CB02187FEA1700C658A1 /* Debug */,
+				FB90CB03187FEA1700C658A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB90CB04187FEA1700C658A1 /* Build configuration list for PBXNativeTarget "Don't touch that swerve boyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB90CB05187FEA1700C658A1 /* Debug */,
+				FB90CB06187FEA1700C658A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB90CAC0187FEA1700C658A1 /* Project object */;
+}
