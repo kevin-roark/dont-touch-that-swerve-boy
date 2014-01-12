@@ -12,4 +12,7 @@
 
 - (BOOL)isPointInSprite:(CGPoint)point;
 
+- (void)resetToRandomPositionInFrame:(CGRect)frame;
+
+
 @end

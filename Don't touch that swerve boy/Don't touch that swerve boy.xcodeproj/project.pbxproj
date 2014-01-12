@@ -10,6 +10,7 @@
 		FB201A44187FF11F00059C5D /* round_swerve_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FB201A43187FF11F00059C5D /* round_swerve_plain.png */; };
 		FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */ = {isa = PBXBuildFile; fileRef = FB201A45187FF38A00059C5D /* round_swerve_shocked.png */; };
 		FB201A49187FF4D400059C5D /* SwerveBoySpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A48187FF4D400059C5D /* SwerveBoySpriteNode.m */; };
+		FB201A4C1882977C00059C5D /* scream_cut.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FB201A4B1882977B00059C5D /* scream_cut.aiff */; };
 		FB90CACC187FEA1700C658A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACB187FEA1700C658A1 /* Foundation.framework */; };
 		FB90CACE187FEA1700C658A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */; };
 		FB90CAD0187FEA1700C658A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACF187FEA1700C658A1 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 		FB201A45187FF38A00059C5D /* round_swerve_shocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_swerve_shocked.png; sourceTree = "<group>"; };
 		FB201A47187FF4D400059C5D /* SwerveBoySpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwerveBoySpriteNode.h; sourceTree = "<group>"; };
 		FB201A48187FF4D400059C5D /* SwerveBoySpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwerveBoySpriteNode.m; sourceTree = "<group>"; };
+		FB201A4A1882078900059C5D /* Scream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Scream.m4a; sourceTree = "<group>"; };
+		FB201A4B1882977B00059C5D /* scream_cut.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = scream_cut.aiff; sourceTree = "<group>"; };
 		FB90CAC8187FEA1700C658A1 /* Don't touch that swerve boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don't touch that swerve boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB90CACB187FEA1700C658A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +141,8 @@
 				FB90CAE8187FEA1700C658A1 /* Spaceship.png */,
 				FB201A43187FF11F00059C5D /* round_swerve_plain.png */,
 				FB201A45187FF38A00059C5D /* round_swerve_shocked.png */,
+				FB201A4B1882977B00059C5D /* scream_cut.aiff */,
+				FB201A4A1882078900059C5D /* Scream.m4a */,
 				FB90CAEA187FEA1700C658A1 /* Images.xcassets */,
 				FB90CAD4187FEA1700C658A1 /* Supporting Files */,
 				FB201A47187FF4D400059C5D /* SwerveBoySpriteNode.h */,
@@ -252,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB201A4C1882977C00059C5D /* scream_cut.aiff in Resources */,
 				FB90CAD8187FEA1700C658A1 /* InfoPlist.strings in Resources */,
 				FB90CAEB187FEA1700C658A1 /* Images.xcassets in Resources */,
 				FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */,

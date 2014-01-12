@@ -7,12 +7,15 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "SwerveBoySpriteNode.h"
 
-@interface SwerveBoyMyScene : SKScene
+@interface SwerveBoyMyScene : SKScene<AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) SwerveBoySpriteNode *swerveBoy;
 @property (nonatomic, strong) SwerveBoySpriteNode *shockedSwerveBoy;
+
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @property (nonatomic) BOOL swerveBoyInThere;
 

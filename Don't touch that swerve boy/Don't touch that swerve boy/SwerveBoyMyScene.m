@@ -18,13 +18,28 @@
         
         self.swerveBoy = [SwerveBoySpriteNode spriteNodeWithImageNamed:@"round_swerve_plain.png"];
         self.swerveBoy.position = [self getFrameCenter];
-        self.swerveBoy.size = CGSizeMake(250, 250);
+        self.swerveBoy.size = CGSizeMake(150, 150);
         
         self.shockedSwerveBoy = [SwerveBoySpriteNode spriteNodeWithImageNamed:@"round_swerve_shocked.png"];
         self.shockedSwerveBoy.position = self.swerveBoy.position;
         self.shockedSwerveBoy.size = self.swerveBoy.size;
         
         self.initialGrowthSpeed = 10.0;
+        
+        NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
+        resourcePath = [resourcePath stringByAppendingString:@"/scream_cut.aiff"];
+        NSError* err;
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:resourcePath] error:&err];
+        
+        if( err ){
+            NSLog(@"Failed with reason: %@", [err localizedDescription]);
+        }
+        else{
+            self.audioPlayer.delegate = self;
+            self.audioPlayer.numberOfLoops = -1;
+            self.audioPlayer.currentTime = 0;
+            self.audioPlayer.volume = 1.0;
+        }
         
         [self putSwerveBoyInThere];
         self.lastFrameTime = CACurrentMediaTime();
@@ -59,6 +74,23 @@
     self.growthSpeed = self.initialGrowthSpeed;
     [self addChild:self.shockedSwerveBoy];
     self.swerveBoyInThere = NO;
+    [self.swerveBoy resetToRandomPositionInFrame:self.frame];
+}
+
+- (void)setScreamLooping {
+    [self.audioPlayer play];
+}
+
+- (void)stopScreamLooping {
+    [self.audioPlayer pause];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    
+}
+
+-(void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -69,7 +101,11 @@
         
         if ([self.swerveBoy isPointInSprite:location] && self.swerveBoyInThere) {
             [self makeSwerveBoyShocked];
+            
+            [self setScreamLooping];
         }
+        
+    
         
         /*
         CGPoint location = [touch locationInNode:self];
@@ -85,9 +121,9 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (!self.swerveBoyInThere) {
         [self putSwerveBoyInThere];
+        
+        [self stopScreamLooping];
     }
-    
-    
 }
 
 - (void)growSwerveBoy:(CFTimeInterval)timeSinceLastGrowth {
@@ -106,6 +142,12 @@
         [self growSwerveBoy:timeDiff];
         
         // next wanna do something with checking max size and showing text STOP TOUCHIN THAT SWERVE BOY
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 2) {
+            
+        }
+        else if (self.shockedSwerveBoy.size.width >= self.frame.size.width) {
+            
+        }
     }
 }
 
