@@ -24,7 +24,19 @@
         self.shockedSwerveBoy.position = self.swerveBoy.position;
         self.shockedSwerveBoy.size = self.swerveBoy.size;
         
-        self.initialGrowthSpeed = 10.0;
+        self.dontTouchText = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.dontTouchText.text = @"DON'T TOUCH THAT SWERVE BOY";
+        self.dontTouchText.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height - 20);
+        
+        self.seriouslyDontTouchText = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.seriouslyDontTouchText.text = @"SERIOUSLY QUIT TOUCHIN THAT SWERVE BOY";
+        self.seriouslyDontTouchText.position = CGPointMake(self.frame.size.width / 2, 20);
+        
+        self.dontTouchInThere = NO;
+        self.seriousTextInThere = NO;
+        
+        self.initialGrowthSpeed = 15.0;
+        self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed;
         
         NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
         resourcePath = [resourcePath stringByAppendingString:@"/scream_cut.aiff"];
@@ -66,6 +78,11 @@
     
     [self addChild:self.swerveBoy];
     self.swerveBoyInThere = YES;
+    
+    [self.seriouslyDontTouchText removeFromParent];
+    [self.dontTouchText removeFromParent];
+    self.dontTouchInThere = NO;
+    self.seriousTextInThere = NO;
 }
 
 - (void)makeSwerveBoyShocked {
@@ -130,7 +147,31 @@
     CGFloat sizeDiff = self.growthSpeed * timeSinceLastGrowth;
     [self.shockedSwerveBoy runAction:[SKAction resizeByWidth:sizeDiff height:sizeDiff duration:0.0]];
     
-    self.growthSpeed = MAX(self.shockedSwerveBoy.size.width / 40.0, self.initialGrowthSpeed);
+    self.growthSpeed = MAX(self.shockedSwerveBoy.size.width / self.growthRate, self.initialGrowthSpeed);
+}
+
+- (void)handleSeriousText:(CFTimeInterval)time {
+    if (!self.seriousTextInThere) {
+        [self addChild:self.seriouslyDontTouchText];
+        self.seriousTextInThere = YES;
+    }
+    
+    int shouldChange = arc4random();
+    if ((shouldChange % 7) == 0) {
+        [self.seriouslyDontTouchText changeColor];
+    }
+}
+
+- (void)handleDontTouchText:(CFTimeInterval)time {
+    if (!self.dontTouchInThere) {
+        [self addChild:self.dontTouchText];
+        self.dontTouchInThere = YES;
+    }
+    
+    int shouldChange = arc4random();
+    if ((shouldChange % 7) == 0) {
+        [self.dontTouchText changeColor];
+    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -143,10 +184,10 @@
         
         // next wanna do something with checking max size and showing text STOP TOUCHIN THAT SWERVE BOY
         if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 2) {
-            
+            [self handleSeriousText:currentTime];
         }
-        else if (self.shockedSwerveBoy.size.width >= self.frame.size.width) {
-            
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width) {
+            [self handleDontTouchText:currentTime];
         }
     }
 }

@@ -29,7 +29,6 @@
     
     int x = (arc4random() % xrange) + self.size.width / 2;
     int y = (arc4random() % yrange) + self.size.height / 2;
-    NSLog([NSString stringWithFormat:@"%d %d", x, y]);
     
     CGPoint p = CGPointMake(x, y);
     self.position = p;
