@@ -23,10 +23,16 @@
         self.shockedSwerveBoy = [SwerveBoySpriteNode spriteNodeWithImageNamed:@"round_swerve_shocked.png"];
         self.shockedSwerveBoy.position = self.swerveBoy.position;
         self.shockedSwerveBoy.size = self.swerveBoy.size;
+        self.shockedSwerveBoy.color = [UIColor redColor];
+        self.shockedSwerveBoy.colorBlendFactor = 0.3;
         
-        self.dontTouchText = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
-        self.dontTouchText.text = @"DON'T TOUCH THAT SWERVE BOY";
-        self.dontTouchText.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height - 20);
+        self.dontTouchText1 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.dontTouchText1.text = @"DON'T TOUCH THAT";
+        self.dontTouchText1.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height - 20);
+        
+        self.dontTouchText2 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.dontTouchText2.text = @"SWERVE BOY";
+        self.dontTouchText2.position = CGPointMake(self.frame.size.width / 2, self.dontTouchText1.position.y - 30);
         
         self.seriouslyDontTouchText = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
         self.seriouslyDontTouchText.text = @"SERIOUSLY QUIT TOUCHIN THAT SWERVE BOY";
@@ -34,6 +40,7 @@
         
         self.dontTouchInThere = NO;
         self.seriousTextInThere = NO;
+        self.colorChangeThreshold = 0.3;
         
         self.initialGrowthSpeed = 15.0;
         self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed;
@@ -55,6 +62,7 @@
         
         [self putSwerveBoyInThere];
         self.lastFrameTime = CACurrentMediaTime();
+        self.lastColorChangeTime = CACurrentMediaTime();
         
         /*
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
@@ -80,7 +88,9 @@
     self.swerveBoyInThere = YES;
     
     [self.seriouslyDontTouchText removeFromParent];
-    [self.dontTouchText removeFromParent];
+    [self.dontTouchText1 removeFromParent];
+    [self.dontTouchText2 removeFromParent];
+    
     self.dontTouchInThere = NO;
     self.seriousTextInThere = NO;
 }
@@ -150,27 +160,28 @@
     self.growthSpeed = MAX(self.shockedSwerveBoy.size.width / self.growthRate, self.initialGrowthSpeed);
 }
 
-- (void)handleSeriousText:(CFTimeInterval)time {
+- (void)handleSeriousText:(CFTimeInterval)currentTime {
     if (!self.seriousTextInThere) {
         [self addChild:self.seriouslyDontTouchText];
         self.seriousTextInThere = YES;
     }
     
-    int shouldChange = arc4random();
-    if ((shouldChange % 7) == 0) {
+    if (currentTime - self.lastColorChangeTime >= self.colorChangeThreshold) {
         [self.seriouslyDontTouchText changeColor];
     }
 }
 
-- (void)handleDontTouchText:(CFTimeInterval)time {
+- (void)handleDontTouchText:(CFTimeInterval)currentTime {
     if (!self.dontTouchInThere) {
-        [self addChild:self.dontTouchText];
+        [self addChild:self.dontTouchText1];
+        [self addChild:self.dontTouchText2];
         self.dontTouchInThere = YES;
     }
     
-    int shouldChange = arc4random();
-    if ((shouldChange % 7) == 0) {
-        [self.dontTouchText changeColor];
+    if (currentTime - self.lastColorChangeTime >= self.colorChangeThreshold) {
+        [self.dontTouchText1 changeColor];
+        self.dontTouchText2.fontColor = self.dontTouchText1.fontColor;
+        self.lastColorChangeTime = currentTime;
     }
 }
 

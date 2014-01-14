@@ -16,8 +16,13 @@
 @property (nonatomic, strong) SwerveBoySpriteNode *swerveBoy;
 @property (nonatomic, strong) SwerveBoySpriteNode *shockedSwerveBoy;
 
-@property (nonatomic, strong) SwerveBoyRapidLabel *dontTouchText;
+@property (nonatomic, strong) SwerveBoyRapidLabel *dontTouchText1;
+@property (nonatomic, strong) SwerveBoyRapidLabel *dontTouchText2;
+
 @property (nonatomic, strong) SwerveBoyRapidLabel *seriouslyDontTouchText;
+
+@property (nonatomic) CFTimeInterval lastColorChangeTime;
+@property (nonatomic) CFTimeInterval colorChangeThreshold;
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
