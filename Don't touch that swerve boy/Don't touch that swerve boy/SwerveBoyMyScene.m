@@ -34,13 +34,23 @@
         self.dontTouchText2.text = @"SWERVE BOY";
         self.dontTouchText2.position = CGPointMake(self.frame.size.width / 2, self.dontTouchText1.position.y - 30);
         
-        self.seriouslyDontTouchText = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
-        self.seriouslyDontTouchText.text = @"SERIOUSLY QUIT TOUCHIN THAT SWERVE BOY";
-        self.seriouslyDontTouchText.position = CGPointMake(self.frame.size.width / 2, 20);
+        self.seriouslyDontTouchText1 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.seriouslyDontTouchText1.text = @"SERIOUSLY QUIT";
+        self.seriouslyDontTouchText1.position = CGPointMake(self.frame.size.width / 2, 100);
+        
+        self.seriouslyDontTouchText2 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.seriouslyDontTouchText2.text = @"TOUCHIN";
+        self.seriouslyDontTouchText2.position =
+            CGPointMake(self.frame.size.width / 2, self.seriouslyDontTouchText1.position.y - 30);
+        
+        self.seriouslyDontTouchText3 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
+        self.seriouslyDontTouchText3.text = @"THAT SWERVE BOY";
+        self.seriouslyDontTouchText3.position =
+            CGPointMake(self.frame.size.width / 2, self.seriouslyDontTouchText2.position.y - 30);
         
         self.dontTouchInThere = NO;
         self.seriousTextInThere = NO;
-        self.colorChangeThreshold = 0.3;
+        self.colorChangeThreshold = 0.15;
         
         self.initialGrowthSpeed = 15.0;
         self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed;
@@ -87,7 +97,9 @@
     [self addChild:self.swerveBoy];
     self.swerveBoyInThere = YES;
     
-    [self.seriouslyDontTouchText removeFromParent];
+    [self.seriouslyDontTouchText1 removeFromParent];
+    [self.seriouslyDontTouchText2 removeFromParent];
+    [self.seriouslyDontTouchText3 removeFromParent];
     [self.dontTouchText1 removeFromParent];
     [self.dontTouchText2 removeFromParent];
     
@@ -162,12 +174,16 @@
 
 - (void)handleSeriousText:(CFTimeInterval)currentTime {
     if (!self.seriousTextInThere) {
-        [self addChild:self.seriouslyDontTouchText];
+        [self addChild:self.seriouslyDontTouchText1];
+        [self addChild:self.seriouslyDontTouchText2];
+        [self addChild:self.seriouslyDontTouchText3];
         self.seriousTextInThere = YES;
     }
     
     if (currentTime - self.lastColorChangeTime >= self.colorChangeThreshold) {
-        [self.seriouslyDontTouchText changeColor];
+        [self.seriouslyDontTouchText1 changeColor];
+        self.seriouslyDontTouchText2.fontColor = self.seriouslyDontTouchText1.fontColor;
+        self.seriouslyDontTouchText3.fontColor = self.seriouslyDontTouchText2.fontColor;
     }
 }
 

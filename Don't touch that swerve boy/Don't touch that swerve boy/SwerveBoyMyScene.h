@@ -19,7 +19,9 @@
 @property (nonatomic, strong) SwerveBoyRapidLabel *dontTouchText1;
 @property (nonatomic, strong) SwerveBoyRapidLabel *dontTouchText2;
 
-@property (nonatomic, strong) SwerveBoyRapidLabel *seriouslyDontTouchText;
+@property (nonatomic, strong) SwerveBoyRapidLabel *seriouslyDontTouchText1;
+@property (nonatomic, strong) SwerveBoyRapidLabel *seriouslyDontTouchText2;
+@property (nonatomic, strong) SwerveBoyRapidLabel *seriouslyDontTouchText3;
 
 @property (nonatomic) CFTimeInterval lastColorChangeTime;
 @property (nonatomic) CFTimeInterval colorChangeThreshold;
