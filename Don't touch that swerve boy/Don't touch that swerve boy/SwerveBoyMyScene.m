@@ -23,8 +23,7 @@
         self.shockedSwerveBoy = [SwerveBoySpriteNode spriteNodeWithImageNamed:@"round_swerve_shocked.png"];
         self.shockedSwerveBoy.position = self.swerveBoy.position;
         self.shockedSwerveBoy.size = self.swerveBoy.size;
-        self.shockedSwerveBoy.color = [UIColor redColor];
-        self.shockedSwerveBoy.colorBlendFactor = 0.3;
+        self.shockedSwerveBoy.colorBlendFactor = 0.5;
         
         self.dontTouchText1 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
         self.dontTouchText1.text = @"DON'T TOUCH THAT";
@@ -208,6 +207,7 @@
         self.lastFrameTime = currentTime;
         
         [self growSwerveBoy:timeDiff];
+        [self.shockedSwerveBoy updateTint];
         
         // next wanna do something with checking max size and showing text STOP TOUCHIN THAT SWERVE BOY
         if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 2) {

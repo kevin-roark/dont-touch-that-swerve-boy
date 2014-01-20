@@ -10,8 +10,18 @@
 
 @implementation SwerveBoySpriteNode
 
-- (BOOL)isPointInSprite:(CGPoint)point {
+CGFloat MAX_COLOR_T = 0.99;
+
++ (id)spriteNodeWithImageNamed:(NSString *)name {
+    SwerveBoySpriteNode *n = [super spriteNodeWithImageNamed:name];
+    n.redVal = 1.0;
+    n.greenVal = 0.0;
+    n.blueVal = 0.0;
     
+    return n;
+}
+
+- (BOOL)isPointInSprite:(CGPoint)point {
     CGFloat xDiff = ABS(self.position.x - point.x);
     CGFloat yDiff = ABS(self.position.y - point.y);
     
@@ -32,6 +42,61 @@
     
     CGPoint p = CGPointMake(x, y);
     self.position = p;
+}
+
+- (void)updateTint {
+    double growthAmount = drand48() * 0.02; // max of 0.02 growth rate, can always set to 0.01 to achieve as before
+    
+    if (self.redVal > MAX_COLOR_T) {
+        if (self.blueVal > 0.01 && self.greenVal < 0.01) {
+            self.blueVal -= growthAmount;
+        }
+        else if (self.blueVal < 0.01 && self.greenVal < 0.01) {
+            self.blueVal = 0.0;
+            self.greenVal = 0.02;
+        }
+        else if (self.blueVal < 0.01 && self.greenVal > 0.01 && self.greenVal < MAX_COLOR_T) {
+            self.greenVal += growthAmount;
+        }
+        else {
+            self.redVal = MAX_COLOR_T - 0.01;
+            self.greenVal = 1.0;
+        }
+    }
+    else if (self.greenVal > MAX_COLOR_T) {
+        if (self.redVal > 0.01 && self.blueVal < 0.01) {
+            self.redVal -= growthAmount;
+        }
+        else if (self.redVal < 0.01 && self.blueVal < 0.01) {
+            self.redVal = 0.0;
+            self.blueVal = 0.02;
+        }
+        else if (self.redVal < 0.01 && self.blueVal > 0.01 && self.blueVal < MAX_COLOR_T) {
+            self.blueVal += growthAmount;
+        }
+        else {
+            self.blueVal = 1.0;
+            self.greenVal = MAX_COLOR_T - 0.01;
+        }
+    }
+    else if (self.blueVal > MAX_COLOR_T) {
+        if (self.greenVal > 0.01 && self.redVal < 0.01) {
+            self.greenVal -= growthAmount;
+        }
+        else if (self.greenVal < 0.01 && self.redVal < 0.01) {
+            self.greenVal = 0.0;
+            self.redVal = 0.02;
+        }
+        else if (self.greenVal < 0.01 && self.redVal > 0.01 && self.redVal < MAX_COLOR_T) {
+            self.redVal += growthAmount;
+        }
+        else {
+            self.redVal = 1.0;
+            self.blueVal = MAX_COLOR_T - 0.01;
+        }
+    }
+    
+    self.color = [UIColor colorWithRed:self.redVal green:self.greenVal blue:self.blueVal alpha:1.0];
 }
 
 @end

@@ -10,9 +10,15 @@
 
 @interface SwerveBoySpriteNode : SKSpriteNode
 
+@property (nonatomic) CGFloat redVal;
+@property (nonatomic) CGFloat greenVal;
+@property (nonatomic) CGFloat blueVal;
+
 - (BOOL)isPointInSprite:(CGPoint)point;
 
 - (void)resetToRandomPositionInFrame:(CGRect)frame;
+
+- (void)updateTint;
 
 
 @end
