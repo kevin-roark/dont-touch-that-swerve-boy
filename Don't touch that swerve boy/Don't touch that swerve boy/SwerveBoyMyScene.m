@@ -55,7 +55,7 @@
         self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed;
         
         NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
-        resourcePath = [resourcePath stringByAppendingString:@"/scream_cut.aiff"];
+        resourcePath = [resourcePath stringByAppendingString:@"/scream_cut_loop_1.aiff"];
         NSError* err;
         self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:resourcePath] error:&err];
         
