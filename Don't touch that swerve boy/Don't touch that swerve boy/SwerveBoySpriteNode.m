@@ -99,4 +99,24 @@ CGFloat MAX_COLOR_T = 0.99;
     self.color = [UIColor colorWithRed:self.redVal green:self.greenVal blue:self.blueVal alpha:1.0];
 }
 
+- (void)giveRandomTint {
+    CGFloat dominantColorVariable = drand48();
+    if (dominantColorVariable < 0.33) { // red
+        self.redVal = 1.0;
+        self.blueVal = 0.0;
+        self.greenVal = drand48() * MAX_COLOR_T - 0.01;
+    }
+    else if (dominantColorVariable > 0.33 && dominantColorVariable < 0.67) { // green
+        self.greenVal = 1.0;
+        self.redVal = 0.0;
+        self.blueVal = drand48() * MAX_COLOR_T - 0.01;
+        
+    }
+    else { // blue
+        self.blueVal = 1.0;
+        self.greenVal = 0.0;
+        self.redVal = drand48() * MAX_COLOR_T - 0.01;
+    }
+}
+
 @end

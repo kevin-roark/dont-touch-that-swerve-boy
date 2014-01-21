@@ -23,7 +23,7 @@
         self.shockedSwerveBoy = [SwerveBoySpriteNode spriteNodeWithImageNamed:@"round_swerve_shocked.png"];
         self.shockedSwerveBoy.position = self.swerveBoy.position;
         self.shockedSwerveBoy.size = self.swerveBoy.size;
-        self.shockedSwerveBoy.colorBlendFactor = 0.5;
+        self.shockedSwerveBoy.colorBlendFactor = 0.55;
         
         self.dontTouchText1 = [[SwerveBoyRapidLabel alloc] initWithFontNamed:@"Arial"];
         self.dontTouchText1.text = @"DON'T TOUCH THAT";
@@ -51,8 +51,8 @@
         self.seriousTextInThere = NO;
         self.colorChangeThreshold = 0.15;
         
-        self.initialGrowthSpeed = 15.0;
-        self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed;
+        self.initialGrowthSpeed = 12.0;
+        self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed * 1.5;
         
         NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
         resourcePath = [resourcePath stringByAppendingString:@"/scream_cut_loop_1.aiff"];
@@ -92,6 +92,7 @@
     [self.shockedSwerveBoy removeFromParent];
     self.shockedSwerveBoy.size = self.swerveBoy.size;
     self.shockedSwerveBoy.position = self.swerveBoy.position;
+    [self.shockedSwerveBoy giveRandomTint];
     
     [self addChild:self.swerveBoy];
     self.swerveBoyInThere = YES;
@@ -142,17 +143,6 @@
             
             [self setScreamLooping];
         }
-        
-    
-        
-        /*
-        CGPoint location = [touch locationInNode:self];
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        sprite.position = location;
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        [self addChild:sprite];
-         */
     }
 }
 
@@ -215,6 +205,8 @@
         }
         if (self.shockedSwerveBoy.size.width >= self.frame.size.width) {
             [self handleDontTouchText:currentTime];
+        }
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 0.6) {
         }
     }
 }

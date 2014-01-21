@@ -20,5 +20,7 @@
 
 - (void)updateTint;
 
+- (void)giveRandomTint;
+
 
 @end
