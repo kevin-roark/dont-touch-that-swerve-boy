@@ -14,6 +14,12 @@
 		FB201A4F1883C96E00059C5D /* SwerveBoyRapidLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A4E1883C96E00059C5D /* SwerveBoyRapidLabel.m */; };
 		FB201A521883D05400059C5D /* SwerveColorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A511883D05300059C5D /* SwerveColorFactory.m */; };
 		FB201A54188DFEB800059C5D /* scream_cut_loop_1.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FB201A53188DFEB800059C5D /* scream_cut_loop_1.aiff */; };
+		FB201AAB188EFCAF00059C5D /* static.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB201AAA188EFCAF00059C5D /* static.gif */; };
+		FB201AAE188EFCB900059C5D /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AAD188EFCB900059C5D /* UIImage+animatedGIF.m */; };
+		FB201AB0188EFCF500059C5D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB201AAF188EFCF500059C5D /* ImageIO.framework */; };
+		FB201AB2188F06A500059C5D /* scream_cut_loop_1_deep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FB201AB1188F06A500059C5D /* scream_cut_loop_1_deep.aiff */; };
+		FB201AB5188F07AB00059C5D /* SwerveBoyAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201AB4188F07AB00059C5D /* SwerveBoyAudioPlayer.m */; };
+		FB201AB7188F0E2F00059C5D /* scream_cut_loop_1_high.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FB201AB6188F0E2F00059C5D /* scream_cut_loop_1_high.aiff */; };
 		FB90CACC187FEA1700C658A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACB187FEA1700C658A1 /* Foundation.framework */; };
 		FB90CACE187FEA1700C658A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */; };
 		FB90CAD0187FEA1700C658A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACF187FEA1700C658A1 /* UIKit.framework */; };
@@ -24,7 +30,6 @@
 		FB90CAE1187FEA1700C658A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB90CADF187FEA1700C658A1 /* Main.storyboard */; };
 		FB90CAE4187FEA1700C658A1 /* SwerveBoyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CAE3187FEA1700C658A1 /* SwerveBoyViewController.m */; };
 		FB90CAE7187FEA1700C658A1 /* SwerveBoyMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FB90CAE6187FEA1700C658A1 /* SwerveBoyMyScene.m */; };
-		FB90CAE9187FEA1700C658A1 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = FB90CAE8187FEA1700C658A1 /* Spaceship.png */; };
 		FB90CAEB187FEA1700C658A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB90CAEA187FEA1700C658A1 /* Images.xcassets */; };
 		FB90CAF2187FEA1700C658A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CAF1187FEA1700C658A1 /* XCTest.framework */; };
 		FB90CAF3187FEA1700C658A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB90CACB187FEA1700C658A1 /* Foundation.framework */; };
@@ -55,6 +60,14 @@
 		FB201A501883D05300059C5D /* SwerveColorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwerveColorFactory.h; sourceTree = "<group>"; };
 		FB201A511883D05300059C5D /* SwerveColorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwerveColorFactory.m; sourceTree = "<group>"; };
 		FB201A53188DFEB800059C5D /* scream_cut_loop_1.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = scream_cut_loop_1.aiff; sourceTree = "<group>"; };
+		FB201AAA188EFCAF00059C5D /* static.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = static.gif; sourceTree = "<group>"; };
+		FB201AAC188EFCB900059C5D /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		FB201AAD188EFCB900059C5D /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		FB201AAF188EFCF500059C5D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		FB201AB1188F06A500059C5D /* scream_cut_loop_1_deep.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = scream_cut_loop_1_deep.aiff; sourceTree = "<group>"; };
+		FB201AB3188F07AB00059C5D /* SwerveBoyAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwerveBoyAudioPlayer.h; sourceTree = "<group>"; };
+		FB201AB4188F07AB00059C5D /* SwerveBoyAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwerveBoyAudioPlayer.m; sourceTree = "<group>"; };
+		FB201AB6188F0E2F00059C5D /* scream_cut_loop_1_high.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = scream_cut_loop_1_high.aiff; sourceTree = "<group>"; };
 		FB90CAC8187FEA1700C658A1 /* Don't touch that swerve boy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don't touch that swerve boy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB90CACB187FEA1700C658A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,7 +84,6 @@
 		FB90CAE3187FEA1700C658A1 /* SwerveBoyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwerveBoyViewController.m; sourceTree = "<group>"; };
 		FB90CAE5187FEA1700C658A1 /* SwerveBoyMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwerveBoyMyScene.h; sourceTree = "<group>"; };
 		FB90CAE6187FEA1700C658A1 /* SwerveBoyMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwerveBoyMyScene.m; sourceTree = "<group>"; };
-		FB90CAE8187FEA1700C658A1 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		FB90CAEA187FEA1700C658A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB90CAF0187FEA1700C658A1 /* Don't touch that swerve boyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Don't touch that swerve boyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB90CAF1187FEA1700C658A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -85,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB201AB0188EFCF500059C5D /* ImageIO.framework in Frameworks */,
 				FB90CACE187FEA1700C658A1 /* CoreGraphics.framework in Frameworks */,
 				FB90CAD0187FEA1700C658A1 /* UIKit.framework in Frameworks */,
 				FB90CAD2187FEA1700C658A1 /* SpriteKit.framework in Frameworks */,
@@ -127,6 +140,7 @@
 		FB90CACA187FEA1700C658A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB201AAF188EFCF500059C5D /* ImageIO.framework */,
 				FB90CACB187FEA1700C658A1 /* Foundation.framework */,
 				FB90CACD187FEA1700C658A1 /* CoreGraphics.framework */,
 				FB90CACF187FEA1700C658A1 /* UIKit.framework */,
@@ -144,13 +158,19 @@
 				FB90CADF187FEA1700C658A1 /* Main.storyboard */,
 				FB90CAE2187FEA1700C658A1 /* SwerveBoyViewController.h */,
 				FB90CAE3187FEA1700C658A1 /* SwerveBoyViewController.m */,
+				FB201AB3188F07AB00059C5D /* SwerveBoyAudioPlayer.h */,
+				FB201AB4188F07AB00059C5D /* SwerveBoyAudioPlayer.m */,
 				FB90CAE5187FEA1700C658A1 /* SwerveBoyMyScene.h */,
 				FB90CAE6187FEA1700C658A1 /* SwerveBoyMyScene.m */,
-				FB90CAE8187FEA1700C658A1 /* Spaceship.png */,
+				FB201AAA188EFCAF00059C5D /* static.gif */,
+				FB201AAC188EFCB900059C5D /* UIImage+animatedGIF.h */,
+				FB201AAD188EFCB900059C5D /* UIImage+animatedGIF.m */,
 				FB201A43187FF11F00059C5D /* round_swerve_plain.png */,
 				FB201A45187FF38A00059C5D /* round_swerve_shocked.png */,
 				FB201A4B1882977B00059C5D /* scream_cut.aiff */,
 				FB201A53188DFEB800059C5D /* scream_cut_loop_1.aiff */,
+				FB201AB1188F06A500059C5D /* scream_cut_loop_1_deep.aiff */,
+				FB201AB6188F0E2F00059C5D /* scream_cut_loop_1_high.aiff */,
 				FB201A4A1882078900059C5D /* Scream.m4a */,
 				FB90CAEA187FEA1700C658A1 /* Images.xcassets */,
 				FB90CAD4187FEA1700C658A1 /* Supporting Files */,
@@ -275,9 +295,11 @@
 				FB90CAD8187FEA1700C658A1 /* InfoPlist.strings in Resources */,
 				FB90CAEB187FEA1700C658A1 /* Images.xcassets in Resources */,
 				FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */,
-				FB90CAE9187FEA1700C658A1 /* Spaceship.png in Resources */,
+				FB201AAB188EFCAF00059C5D /* static.gif in Resources */,
 				FB201A44187FF11F00059C5D /* round_swerve_plain.png in Resources */,
+				FB201AB7188F0E2F00059C5D /* scream_cut_loop_1_high.aiff in Resources */,
 				FB90CAE1187FEA1700C658A1 /* Main.storyboard in Resources */,
+				FB201AB2188F06A500059C5D /* scream_cut_loop_1_deep.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +321,10 @@
 				FB90CAE4187FEA1700C658A1 /* SwerveBoyViewController.m in Sources */,
 				FB90CADA187FEA1700C658A1 /* main.m in Sources */,
 				FB201A521883D05400059C5D /* SwerveColorFactory.m in Sources */,
+				FB201AB5188F07AB00059C5D /* SwerveBoyAudioPlayer.m in Sources */,
 				FB90CADE187FEA1700C658A1 /* SwerveBoyAppDelegate.m in Sources */,
 				FB90CAE7187FEA1700C658A1 /* SwerveBoyMyScene.m in Sources */,
+				FB201AAE188EFCB900059C5D /* UIImage+animatedGIF.m in Sources */,
 				FB201A4F1883C96E00059C5D /* SwerveBoyRapidLabel.m in Sources */,
 				FB201A49187FF4D400059C5D /* SwerveBoySpriteNode.m in Sources */,
 			);

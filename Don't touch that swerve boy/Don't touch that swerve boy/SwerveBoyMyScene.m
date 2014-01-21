@@ -12,8 +12,6 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
-        
         self.backgroundColor = [SKColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
         
         self.swerveBoy = [SwerveBoySpriteNode spriteNodeWithImageNamed:@"round_swerve_plain.png"];
@@ -54,32 +52,9 @@
         self.initialGrowthSpeed = 12.0;
         self.growthRate = self.swerveBoy.size.width / self.initialGrowthSpeed * 1.5;
         
-        NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
-        resourcePath = [resourcePath stringByAppendingString:@"/scream_cut_loop_1.aiff"];
-        NSError* err;
-        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:resourcePath] error:&err];
-        
-        if( err ){
-            NSLog(@"Failed with reason: %@", [err localizedDescription]);
-        }
-        else{
-            self.audioPlayer.delegate = self;
-            self.audioPlayer.numberOfLoops = -1;
-            self.audioPlayer.currentTime = 0;
-            self.audioPlayer.volume = 1.0;
-        }
-        
         [self putSwerveBoyInThere];
         self.lastFrameTime = CACurrentMediaTime();
         self.lastColorChangeTime = CACurrentMediaTime();
-        
-        /*
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        [self addChild:myLabel];*/
     }
     return self;
 }
@@ -116,22 +91,6 @@
     [self.swerveBoy resetToRandomPositionInFrame:self.frame];
 }
 
-- (void)setScreamLooping {
-    [self.audioPlayer play];
-}
-
-- (void)stopScreamLooping {
-    [self.audioPlayer pause];
-}
-
--(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    
-}
-
--(void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
-    
-}
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
@@ -141,7 +100,7 @@
         if ([self.swerveBoy isPointInSprite:location] && self.swerveBoyInThere) {
             [self makeSwerveBoyShocked];
             
-            [self setScreamLooping];
+            [self.swerveController setScreamLooping];
         }
     }
 }
@@ -150,7 +109,8 @@
     if (!self.swerveBoyInThere) {
         [self putSwerveBoyInThere];
         
-        [self stopScreamLooping];
+        [self.swerveController stopAllAudioLooping];
+        [self.swerveController hideStatic];
     }
 }
 
@@ -199,14 +159,25 @@
         [self growSwerveBoy:timeDiff];
         [self.shockedSwerveBoy updateTint];
         
-        // next wanna do something with checking max size and showing text STOP TOUCHIN THAT SWERVE BOY
-        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 2) {
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 8) { // floating head on static
+            if (!self.swerveController.showingFloatingHead) {
+                [self.swerveController addFloatingStaticHead];
+            }
+            [self.swerveController adjustStaticSwerveBoyPosition:currentTime];
+        }
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 4) { // static mode
+            if (!self.swerveController.showingStatic) {
+                [self.swerveController produceStatic];
+                [self.swerveController setWarpedLooping];
+            }
+            [self.swerveController adjustScreamVolumes:currentTime];
+            [self.swerveController adjustStaticOpacity:currentTime];
+        }
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 2) { // bottom text
             [self handleSeriousText:currentTime];
         }
-        if (self.shockedSwerveBoy.size.width >= self.frame.size.width) {
+        if (self.shockedSwerveBoy.size.width >= self.frame.size.width) { // top text
             [self handleDontTouchText:currentTime];
-        }
-        if (self.shockedSwerveBoy.size.width >= self.frame.size.width * 0.6) {
         }
     }
 }

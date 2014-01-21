@@ -7,11 +7,14 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import <AVFoundation/AVFoundation.h>
+#import "SwerveBoyViewController.h"
 #import "SwerveBoySpriteNode.h"
 #import "SwerveBoyRapidLabel.h"
+#import "UIImage+animatedGIF.h"
 
-@interface SwerveBoyMyScene : SKScene<AVAudioPlayerDelegate>
+@interface SwerveBoyMyScene : SKScene
+
+@property (nonatomic, strong) SwerveBoyViewController *swerveController;
 
 @property (nonatomic, strong) SwerveBoySpriteNode *swerveBoy;
 @property (nonatomic, strong) SwerveBoySpriteNode *shockedSwerveBoy;
@@ -25,8 +28,6 @@
 
 @property (nonatomic) CFTimeInterval lastColorChangeTime;
 @property (nonatomic) CFTimeInterval colorChangeThreshold;
-
-@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 @property (nonatomic) BOOL swerveBoyInThere;
 @property (nonatomic) BOOL dontTouchInThere;
