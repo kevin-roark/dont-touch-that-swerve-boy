@@ -72,7 +72,7 @@
     NSError* err;
     SwerveBoyAudioPlayer *p = [[SwerveBoyAudioPlayer alloc]
                                initWithContentsOfURL:[NSURL fileURLWithPath:resourcePath] error:&err];
-    if( err ){
+    if( err ) {
         NSLog(@"Failed to create audio player with reason: %@", [err localizedDescription]);
     }
     else {
