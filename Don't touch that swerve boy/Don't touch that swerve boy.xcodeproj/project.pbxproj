@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1F7F7118985432007B00DA /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F6B18985432007B00DA /* app_icon.png */; };
+		FB1F7F7218985432007B00DA /* app_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F6C18985432007B00DA /* app_icon@2x.png */; };
+		FB1F7F7318985432007B00DA /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F6D18985432007B00DA /* settings_icon.png */; };
+		FB1F7F7418985432007B00DA /* settings_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F6E18985432007B00DA /* settings_icon@2x.png */; };
+		FB1F7F7518985432007B00DA /* spotlight_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F6F18985432007B00DA /* spotlight_icon.png */; };
+		FB1F7F7618985432007B00DA /* spotlight_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F7018985432007B00DA /* spotlight_icon@2x.png */; };
+		FB1F7F79189856AA007B00DA /* base_launch_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F77189856AA007B00DA /* base_launch_icon.png */; };
+		FB1F7F7A189856AA007B00DA /* crunched_launch_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1F7F78189856AA007B00DA /* crunched_launch_icon.png */; };
 		FB201A44187FF11F00059C5D /* round_swerve_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = FB201A43187FF11F00059C5D /* round_swerve_plain.png */; };
 		FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */ = {isa = PBXBuildFile; fileRef = FB201A45187FF38A00059C5D /* round_swerve_shocked.png */; };
 		FB201A49187FF4D400059C5D /* SwerveBoySpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FB201A48187FF4D400059C5D /* SwerveBoySpriteNode.m */; };
@@ -49,6 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB1F7F6B18985432007B00DA /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon.png; path = Images.xcassets/app_icon.png; sourceTree = "<group>"; };
+		FB1F7F6C18985432007B00DA /* app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app_icon@2x.png"; path = "Images.xcassets/app_icon@2x.png"; sourceTree = "<group>"; };
+		FB1F7F6D18985432007B00DA /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings_icon.png; path = Images.xcassets/settings_icon.png; sourceTree = "<group>"; };
+		FB1F7F6E18985432007B00DA /* settings_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings_icon@2x.png"; path = "Images.xcassets/settings_icon@2x.png"; sourceTree = "<group>"; };
+		FB1F7F6F18985432007B00DA /* spotlight_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spotlight_icon.png; path = Images.xcassets/spotlight_icon.png; sourceTree = "<group>"; };
+		FB1F7F7018985432007B00DA /* spotlight_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spotlight_icon@2x.png"; path = "Images.xcassets/spotlight_icon@2x.png"; sourceTree = "<group>"; };
+		FB1F7F77189856AA007B00DA /* base_launch_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base_launch_icon.png; sourceTree = "<group>"; };
+		FB1F7F78189856AA007B00DA /* crunched_launch_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crunched_launch_icon.png; sourceTree = "<group>"; };
 		FB201A43187FF11F00059C5D /* round_swerve_plain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_swerve_plain.png; sourceTree = "<group>"; };
 		FB201A45187FF38A00059C5D /* round_swerve_shocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round_swerve_shocked.png; sourceTree = "<group>"; };
 		FB201A47187FF4D400059C5D /* SwerveBoySpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwerveBoySpriteNode.h; sourceTree = "<group>"; };
@@ -118,6 +134,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB1F7F6A18985422007B00DA /* app_icons */ = {
+			isa = PBXGroup;
+			children = (
+				FB1F7F77189856AA007B00DA /* base_launch_icon.png */,
+				FB1F7F78189856AA007B00DA /* crunched_launch_icon.png */,
+				FB1F7F6B18985432007B00DA /* app_icon.png */,
+				FB1F7F6C18985432007B00DA /* app_icon@2x.png */,
+				FB1F7F6D18985432007B00DA /* settings_icon.png */,
+				FB1F7F6E18985432007B00DA /* settings_icon@2x.png */,
+				FB1F7F6F18985432007B00DA /* spotlight_icon.png */,
+				FB1F7F7018985432007B00DA /* spotlight_icon@2x.png */,
+			);
+			name = app_icons;
+			sourceTree = "<group>";
+		};
 		FB90CABF187FEA1700C658A1 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +184,7 @@
 		FB90CAD3187FEA1700C658A1 /* Don't touch that swerve boy */ = {
 			isa = PBXGroup;
 			children = (
+				FB1F7F6A18985422007B00DA /* app_icons */,
 				FB90CADC187FEA1700C658A1 /* SwerveBoyAppDelegate.h */,
 				FB90CADD187FEA1700C658A1 /* SwerveBoyAppDelegate.m */,
 				FB90CADF187FEA1700C658A1 /* Main.storyboard */,
@@ -291,15 +323,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB201A4C1882977C00059C5D /* scream_cut.aiff in Resources */,
+				FB1F7F7318985432007B00DA /* settings_icon.png in Resources */,
+				FB1F7F7218985432007B00DA /* app_icon@2x.png in Resources */,
 				FB201A54188DFEB800059C5D /* scream_cut_loop_1.aiff in Resources */,
 				FB90CAD8187FEA1700C658A1 /* InfoPlist.strings in Resources */,
 				FB90CAEB187FEA1700C658A1 /* Images.xcassets in Resources */,
+				FB1F7F7418985432007B00DA /* settings_icon@2x.png in Resources */,
+				FB1F7F79189856AA007B00DA /* base_launch_icon.png in Resources */,
 				FB201A46187FF38A00059C5D /* round_swerve_shocked.png in Resources */,
+				FB1F7F7A189856AA007B00DA /* crunched_launch_icon.png in Resources */,
+				FB1F7F7618985432007B00DA /* spotlight_icon@2x.png in Resources */,
+				FB1F7F7118985432007B00DA /* app_icon.png in Resources */,
 				FB201AAB188EFCAF00059C5D /* static.gif in Resources */,
 				FB201A44187FF11F00059C5D /* round_swerve_plain.png in Resources */,
 				FB201AB7188F0E2F00059C5D /* scream_cut_loop_1_high.aiff in Resources */,
 				FB90CAE1187FEA1700C658A1 /* Main.storyboard in Resources */,
 				FB201AB2188F06A500059C5D /* scream_cut_loop_1_deep.aiff in Resources */,
+				FB1F7F7518985432007B00DA /* spotlight_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +491,7 @@
 		FB90CB02187FEA1700C658A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/kevinroark/Documents/FacebookSDK,
@@ -469,8 +508,7 @@
 		FB90CB03187FEA1700C658A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/kevinroark/Documents/FacebookSDK,
