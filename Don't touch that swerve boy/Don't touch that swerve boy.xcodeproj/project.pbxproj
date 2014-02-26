@@ -293,6 +293,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Kevin Roark";
 				TargetAttributes = {
+					FB90CAC7187FEA1700C658A1 = {
+						DevelopmentTeam = DHJBRYP9PM;
+					};
 					FB90CAEF187FEA1700C658A1 = {
 						TestTargetID = FB90CAC7187FEA1700C658A1;
 					};
@@ -499,6 +502,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Don't touch that swerve boy/Don't touch that swerve boy-Prefix.pch";
 				INFOPLIST_FILE = "Don't touch that swerve boy/Don't touch that swerve boy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -516,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Don't touch that swerve boy/Don't touch that swerve boy-Prefix.pch";
 				INFOPLIST_FILE = "Don't touch that swerve boy/Don't touch that swerve boy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
