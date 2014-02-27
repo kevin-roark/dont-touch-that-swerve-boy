@@ -494,7 +494,7 @@
 		FB90CB02187FEA1700C658A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Roark (3V9EAH7ZH2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/kevinroark/Documents/FacebookSDK,
@@ -504,6 +504,7 @@
 				INFOPLIST_FILE = "Don't touch that swerve boy/don't touch that swerve boy.temp_caseinsensitive_rename-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "don't touch that swerve boy.temp_caseinsensitive_rename";
+				PROVISIONING_PROFILE = "E4744368-79EC-4434-AB8C-FAD149E9ED22";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -512,7 +513,8 @@
 		FB90CB03187FEA1700C658A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kevin Roark (3V9EAH7ZH2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Roark (3V9EAH7ZH2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/kevinroark/Documents/FacebookSDK,
@@ -522,6 +524,7 @@
 				INFOPLIST_FILE = "Don't touch that swerve boy/don't touch that swerve boy.temp_caseinsensitive_rename-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "don't touch that swerve boy.temp_caseinsensitive_rename";
+				PROVISIONING_PROFILE = "E4744368-79EC-4434-AB8C-FAD149E9ED22";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
